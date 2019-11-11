@@ -7,8 +7,8 @@ public class App {
 	
 	public static void main(String args[]) {
 		AbstractApplicationContext context=new ClassPathXmlApplicationContext("employee.xml");
-		EmployeeDetails employ=(EmployeeDetails) context.getBean("emp1");
-		Department depta=(Department) context.getBean("dept");
+		EmployeeDetails employ=(EmployeeDetails) context.getBean("emp");
+		//Department depta=(Department) context.getBean("dept");
 		
 		employ.SalaryDetails();
 		

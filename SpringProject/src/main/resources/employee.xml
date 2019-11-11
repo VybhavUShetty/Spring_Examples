@@ -7,9 +7,9 @@
 
 
    <bean id = "emp" class = "com.lti.Assignment.EmployeeDetails">
-   <property name="Department" ref="dept"/>
+   <property name="d" ref="dept"/>
    </bean>
-   <bean id="dept" class="com.lti.Assignment.Department"/>
+   <bean id="dept" class="com.lti.Assignment.Employee"/>
    
  
       
