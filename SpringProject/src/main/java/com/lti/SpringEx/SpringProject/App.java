@@ -9,7 +9,7 @@ public class App
     public static void main( String[] args )
     {
         AbstractApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        HelloWorld bean=(HelloWorld) context.getBean("helloWorldBean");
+        HelloWorld bean=(HelloWorld) context.getBean("emp");
         bean.printMessage("this is vaibhav");
         
         bean.add(5, 10);
