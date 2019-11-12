@@ -10,8 +10,8 @@ public class App {
 		Trainee trainee=(Trainee) context.getBean("tra");
 		//Department depta=(Department) context.getBean("dept");
 		
-		trainee.getTname();
-		trainee.getTid();
+		System.out.println(trainee.getTname());
+		System.out.println(trainee.getTid());
 		
 
 }

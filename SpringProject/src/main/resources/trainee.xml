@@ -6,13 +6,9 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-   <bean id = "tra" class = "com.lti.Assignment.Trainee">
-   <property name="tid" ref="dept"/>
-   <property name="tname" ref="dept"/>
+   <bean id = "tra" class = "com.lti.Example2.Trainee">
+   <property name="tid" value="1" />
+   <property name="tname" value="vybhav"/>
    </bean>
-   <bean id="dept" class="com.lti.Assignment.Trainee"/>
-   
- 
-      
   
 </beans>
