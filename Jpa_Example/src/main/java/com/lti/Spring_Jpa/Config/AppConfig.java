@@ -1,4 +1,4 @@
-package com.lti.Spring_Jpa.Jpa_Example;
+package com.lti.Spring_Jpa.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,22 +10,23 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScans(value={@ComponentScan("com.lti.SpringEx.dao"),@ComponentScan("com.lti.SpringEx.service")})
+@ComponentScans(value={@ComponentScan("com.lti.Spring_Jpa.Jpa_Dao"),@ComponentScan("com.lti.Spring_Jpa.service")})
 public class AppConfig {
 	@Bean
-	public LocalEntityManagerFactoryBean getEntityManagerFactoryBean() {
+	public LocalEntityManagerFactoryBean geEntityManagerFactoryBean() {
 		LocalEntityManagerFactoryBean factoryBean=new LocalEntityManagerFactoryBean();
-		factoryBean.setPersistenceUnitName("LOCAL_PERSISTENCE");
+		factoryBean.setPersistenceUnitName("persistence");
 		return factoryBean;
+	}
 		
 		@Bean
-		public JpaTransactionManager getJpaTransactionManager() {
+		public JpaTransactionManager geJpaTransactionManager() {
 			JpaTransactionManager transactionManager=new JpaTransactionManager();
-			transactionManager.setEntityManagerFactory(getEntityManagerFactoryBean().getObject());
+			transactionManager.setEntityManagerFactory(geEntityManagerFactoryBean().getObject());
 			return transactionManager;
 		}
 		
 				
 	}
 
-}
+
